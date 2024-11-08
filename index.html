@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcards Sonic</title>
+    <title>Flashcards Sonic - Perguntas e Respostas</title>
     <style>
         /* Resetando margens e padding */
         * {
@@ -50,7 +50,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             position: relative;
             background-color: #0077C8;
             color: white;
@@ -112,8 +112,19 @@
 
         /* Descrições rápidas (no verso dos cartões) */
         .card-back p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             text-align: center;
+        }
+
+        /* Feedback para a resposta */
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+
+        .incorrect {
+            color: red;
+            font-weight: bold;
         }
 
         /* Responsividade */
@@ -142,95 +153,85 @@
 </head>
 <body>
 
-    <h1>SONIC CLÁSSICO</h1>
+    <h1>Flashcards Sonic - Perguntas e Respostas</h1>
 
     <div class="card-container">
-        <div class="card blue" onclick="flipCard(this)">
+        <!-- Cartão 1 -->
+        <div class="card blue" onclick="flipCard(this, 'Quem é o herói mais rápido do mundo?', 'Sonic é o ouriço mais rápido e protagonista dos jogos.')">
             <div class="card-inner">
-                <div class="card-front">Sonic</div>
+                <div class="card-front">Quem é o herói mais rápido do mundo?</div>
                 <div class="card-back">
-                    <p>O ouriço mais rápido do mundo!</p>
+                    <p></p>
                 </div>
             </div>
         </div>
-        <div class="card white" onclick="flipCard(this)">
+        <!-- Cartão 2 -->
+        <div class="card white" onclick="flipCard(this, 'Quem é o parceiro de Sonic que tem duas caudas?', 'Tails, também conhecido como Miles Prower, é o parceiro leal de Sonic com duas caudas.')">
             <div class="card-inner">
-                <div class="card-front">Tails</div>
+                <div class="card-front">Quem é o parceiro de Sonic que tem duas caudas?</div>
                 <div class="card-back">
-                    <p>O fiel parceiro de Sonic, com duas caudas!</p>
+                    <p></p>
                 </div>
             </div>
         </div>
-        <div class="card black" onclick="flipCard(this)">
+        <!-- Cartão 3 -->
+        <div class="card black" onclick="flipCard(this, 'Quem é o guardião da Master Emerald?', 'Knuckles é o guardião da Master Emerald e sempre tenta proteger a pedra preciosa.')">
             <div class="card-inner">
-                <div class="card-front">Knuckles</div>
+                <div class="card-front">Quem é o guardião da Master Emerald?</div>
                 <div class="card-back">
-                    <p>O guardião da Master Emerald.</p>
+                    <p></p>
                 </div>
             </div>
         </div>
-        <div class="card silver" onclick="flipCard(this)">
+        <!-- Cartão 4 -->
+        <div class="card silver" onclick="flipCard(this, 'Quem é o rival de Sonic com poderes especiais?', 'Shadow é um anti-herói que tem poderes sobrenaturais e rivaliza com Sonic.')">
             <div class="card-inner">
-                <div class="card-front">Shadow</div>
+                <div class="card-front">Quem é o rival de Sonic com poderes especiais?</div>
                 <div class="card-back">
-                    <p>O anti-herói com habilidades sobrenaturais.</p>
+                    <p></p>
                 </div>
             </div>
         </div>
-        <div class="card gold" onclick="flipCard(this)">
+        <!-- Cartão 5 -->
+        <div class="card gold" onclick="flipCard(this, 'Quem é o vilão que tenta dominar o mundo?', 'Eggman é o vilão principal, conhecido por suas invenções e planos para dominar o mundo.')">
             <div class="card-inner">
-                <div class="card-front">Eggman</div>
+                <div class="card-front">Quem é o vilão que tenta dominar o mundo?</div>
                 <div class="card-back">
-                    <p>O vilão que sempre tenta dominar o mundo!</p>
+                    <p></p>
                 </div>
             </div>
         </div>
-        <div class="card colorful" onclick="flipCard(this)">
+        <!-- Cartão 6 -->
+        <div class="card colorful" onclick="flipCard(this, 'Quem usa um martelo enorme e gosta de Sonic?', 'Amy Rose é uma garota corajosa que usa um martelo gigante e é apaixonada por Sonic.')">
             <div class="card-inner">
-                <div class="card-front">Amy</div>
+                <div class="card-front">Quem usa um martelo enorme e gosta de Sonic?</div>
                 <div class="card-back">
-                    <p>A força feminina com um martelo enorme!</p>
-                </div>
-            </div>
-        </div>
-        <div class="card blue" onclick="flipCard(this)">
-            <div class="card-inner">
-                <div class="card-front">Silver</div>
-                <div class="card-back">
-                    <p>O herói do futuro, com poderes telecinéticos.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card white" onclick="flipCard(this)">
-            <div class="card-inner">
-                <div class="card-front">Metal Sonic</div>
-                <div class="card-back">
-                    <p>O robô rival de Sonic, imbatível!</p>
-                </div>
-            </div>
-        </div>
-        <div class="card black" onclick="flipCard(this)">
-            <div class="card-inner">
-                <div class="card-front">Rouge</div>
-                <div class="card-back">
-                    <p>A espiã e amante de joias preciosas.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card silver" onclick="flipCard(this)">
-            <div class="card-inner">
-                <div class="card-front">Vector</div>
-                <div class="card-back">
-                    <p>O detetive crocante com um gosto por mistérios.</p>
+                    <p></p>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="feedback"></div>
+
     <script>
-        function flipCard(card) {
+        function flipCard(card, question, answer) {
             const inner = card.querySelector('.card-inner');
+            const back = card.querySelector('.card-back');
+            const feedback = document.getElementById('feedback');
+            
             inner.classList.toggle('flip');
+            
+            if (inner.classList.contains('flip')) {
+                // Exibe a resposta ao virar o cartão
+                back.innerHTML = `<p>${answer}</p>`;
+                // Exibe o feedback na parte inferior
+                feedback.innerHTML = `<p class="correct">Resposta correta: ${answer}</p>`;
+            } else {
+                // Exibe a pergunta novamente
+                back.innerHTML = `<p></p>`;
+                feedback.innerHTML = '';
+            }
         }
     </script>
 
